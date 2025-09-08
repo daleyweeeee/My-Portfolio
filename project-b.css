@@ -1,0 +1,255 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&displayswap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #333333;
+    color: #f5f5f5;
+}
+
+.header {
+    padding: 20px 10%;
+    justify-content: space-between;
+    position: fixed;
+    background: transparent;
+    top: 0;
+    align-items: center;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+}
+
+.logo {
+    font-weight: 600;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 30px;
+    color: white;
+    transition: .4s;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: cyan;
+}
+
+.home {
+    background: url(akonani.png) no-repeat; 
+    background-size: 1000px;
+    background-position: right;
+    padding: 0 10%;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    line-height: 1.2;
+    font-weight: 700px;
+    font-size: 56px;
+    width: 1500px;
+}
+
+.home-content h3 {
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(212, 148, 44);
+}
+
+.home-content p {
+    margin: 20px 0 40px;
+    font-size: 17px;
+}
+
+.home-content .btn-box {
+    width: 345px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-box a {
+    font-size: 19px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid cyan;
+    background: cyan;
+    width: 150px;
+    height: 100%;
+    border-radius: 8px;
+    z-index: 1;
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.btn-box a:nth-child(2) {
+    color: cyan;
+    background: transparent;
+}
+
+.btn-box a::before {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background-color: rgb(139, 83, 83);
+    content: '';
+    position: absolute;
+    transition: .4s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.about {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    display: flex;
+    background: var(--second-bg-color);
+    padding-bottom: 6rem;
+    gap: 2rem;
+}
+
+.heading {
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: cyan;
+}
+
+.first {
+    font-size: 20px;
+    padding: 20px 10%;
+    width: 1500px;
+}
+
+.second {
+    padding: 20px 10%;
+    font-size: 20px;
+    width: 1500px;
+}
+
+.third {
+    padding:20px 10%;
+    font-size: 20px;
+    width: 1500px;
+}
+
+.fourth {
+    padding:20px 10%;
+    font-size: 20px;
+    width: 1500px;
+}
+
+.fifth {
+    padding:20px 10%;
+    font-size: 20px;
+    width: 1500px;
+}
+
+.sixth {
+    padding:20px 10%;
+    font-size: 20px;
+    width: 1500px;
+}
+
+.education {
+    padding: 20px 10%;
+}
+
+.education h1 {
+    font-size: 40px;
+}
+
+.code {
+    padding: 20px 10%;
+    font-size: 20px;
+}
+
+.cude {
+    padding: 20px 10%;
+    font-size: 20px;
+}
+
+.contact {
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.contact form {
+    text-align: center;
+    margin: 0;
+    max-width: 70rem;
+}
+
+.contact form .input-box {
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.contact form .input-box .input-field {
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contact form .input-box .input-field input, 
+.contact form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid white;
+}
+
+.btn {
+    padding: 20px;
+    border-bottom: 20px;
+    background-color: aqua;
+    cursor: pointer;
+    transition: .5s;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 200px;
+}
+
+.btn:hover {
+    background-color: rgb(117, 89, 89);
+}
+
+.btn:active {
+    opacity: 1;
+}
+
+.contact {
+    padding: 40px 25%;
+}

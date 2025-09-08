@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Sushi Rolls</title>
+<!-- CSS starts here-->
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+ --red:#ff3838;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:all .2s linear;
+}
+
+*::selection{
+    background:var(--red);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body{
+    background:#f7f7f7;
+}
+
+section{
+    padding: 2rem 9%;
+
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1)
+}
+
+
+
+header .navbar a{
+    font-size: 25px;
+    margin-left: 2rem;
+    color:#666;
+}
+
+header .navbar a:hover{
+    color:#a30707;
+}
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    flex: 1 1 40rem;
+}
+
+.home .image {
+    flex: 1 1 40rem;
+}
+
+.home .image img{
+    width: 100%;
+    padding: 1rem;
+    animation: float 3s linear infinite;
+}
+
+.home .content h3 {
+    font-size: 150px;
+    color: rgb(45, 76, 26);
+}
+
+.home .content p {
+    font-size: 27px;
+    padding: 10px;
+}
+
+.heading {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 60px;
+}
+
+.content {
+    font-size: 30px;
+}
+
+.sushi-menu {
+    text-align: center;
+    font-weight: bold; 
+    font-size: 40px; 
+    background-color: darkgreen;
+    padding: 20px;
+    color: white;
+}
+
+.ikura-roll {
+    font-size: 40px;
+    float: left;
+    text-align: left;
+}
+
+.price-one {
+    font-size: 40px;
+    cursor: pointer;
+    text-align: right;
+    float: right;
+    background-color: tan;
+    border-radius: 50px;
+    padding: 18px;
+}
+
+.price-one:hover {
+    background-color: red;
+}
+
+.price-one:active {
+    background-color: white;
+}
+
+.ikura-grams {
+    font-size: 20px;
+    text-align: left;
+}
+
+.ikura-inde {
+    font-size: 20px;
+    text-align: left;
+}
+
+.sake-roll {
+    font-size: 40px;
+    float: left;
+    text-align: left;
+}
+
+.sake-grams {
+    font-size: 20px;
+    text-align: left;
+}
+
+.sake-inde {
+    font-size: 20px;
+    text-align: left;
+}
+
+.container {
+    color: darkolivegreen;
+}
+
+.futo-roll {
+    font-size: 40px;
+    float: left;
+    text-align: left;
+}
+
+.futo-grams {
+    font-size: 20px;
+    text-align: left;
+}
+
+.futo-inde {
+    font-size: 20px;
+    text-align: left;
+}
+
+.sushi-roll {
+    font-size: 40px;
+    float: left;
+    text-align: left;
+}
+
+.sushi-set {
+    font-size: 20px;
+    text-align: left;
+}
+
+.sushi-grams {
+    font-size: 20px;
+    text-align: left;
+}
+
+.mini-roll {
+    font-size: 40px;
+    float: left;
+    text-align: left;
+}
+
+.mini-set {
+    font-size: 20px;
+    text-align: left;
+    color: black;
+}
+
+.mini-grams {
+    font-size: 20px;
+    text-align: left;
+    color: black;
+}
+
+.nigiri-roll {
+    font-size: 40px;
+    float: left;
+    text-align: left;
+}
+
+.Aburi-roll {
+    font-size: 40px;
+    float: left;
+    text-align: left;
+}
+
+.about {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(241, 231, 219);
+}
+
+.about-us {
+    text-align: left;
+    font-weight: bold;
+}
+
+.des {
+    width: 1100px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.sched {
+    text-align: left;
+    font-size: 25px;
+    color: red;
+}
+
+.sched-1 {
+    text-align: left;
+    font-size: 25px;
+    color: red;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.row p{
+    font-weight: bold;
+    margin: 10px;
+}
+.row form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px 40px 20px 20px;
+}
+
+.row form h8{
+    text-align: center;
+    font-weight: bold;
+    color: rgb(255, 166, 0);
+}
+
+.row form input{
+    width: 100%;
+    height: 17pt;
+    padding: 5px;
+    margin: 5px;
+}
+
+.row form textarea{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0 0 0;
+}
+
+.row form button{
+    margin: auto;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(255, 166, 000);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+
+.row form button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 166, 0);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.205);
+}
+
+.row form button:active{
+    opacity: 0.5;
+}
+
+.ases {
+    font-size: 25px;
+    width: 649px;
+    text-align: left;
+}
+
+.asis {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.asos {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.asus {
+    font-size: 20px;
+}
+
+.btn {
+    cursor: pointer;
+    color: #a30707;
+}
+
+.btn:hover {
+    background-color: red;
+    transition: .15ms;
+}
+
+.btn:active {
+    opacity: 0.25;
+}
+    </style>
+
+<!-- CSS ENDS HERE -->
+
+</head>
+<body>
+    <!-- Header -->
+
+    <header>
+        <nav class="navbar">
+            <a href="#Home">home</a>
+            <a href="#Menu">menu</a>
+            <a href="#About">about</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="Home">
+
+        <div class="content">
+            <h3>Taste of Japan</h3>
+            <p>Purest Sushi Experience Focusing on Premium Quality Ingredients.</p>
+        </div>
+
+        <div class="image">
+            <img src="sushi4.jpg" alt="">
+        </div>
+
+    </section>
+
+    <!-- Menu -->
+
+    <section class="menu" id="Menu">
+
+        <h1 class="heading"> our <span>menu</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="content">
+                    <h1 class="sushi-menu">SUSHI MENU</h1>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        <div class="container">
+        <h3 class="ikura-roll">Ikura Roll</h3>
+        <h2 class="price-one">₱150</h2>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 class="ikura-grams">250 gr</h3>
+    <p class="ikura-inde">Cucumber, salmon roe</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h3 class="sake-roll">Sake Roll</h3>
+        <h2 class="price-one">₱200</h2>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 class="sake-grams">250 gr</h3>
+    <p class="sake-inde">Salmon</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h3 class="futo-roll">Futomaki Roll</h3>
+        <h2 class="price-one">₱200</h2>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 class="futo-grams">400 gr</h3>
+    <p class="futo-inde">Cucumber, egg omelette, chopped tuna, imitation crab meat</p>
+
+        <div class="box-container">
+            <div class="box">
+                <div class="content">
+                    <h1 class="sushi-menu">SUSHI SETS</h1>
+                </div>
+                <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="container">
+                <h3 class="sushi-roll">Sushi Roll Set</h3>
+                <h2 class="price-one">₱450</h2>
+            </div>
+            <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 class="sushi-set">Futomaki, philadelphia, philadelphia light, sake, ikura</h3>
+    <p class="sushi-grams">850 gr</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h3 class="mini-roll">Mini Set</h3>
+        <h2 class="price-one">₱400</h2>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 class="mini-set">Nigiri salmon set, futomaki roll set</h3>
+    <p class="mini-grams">420 gr</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h3 class="nigiri-roll">Nigiri Sushi Set</h3>
+        <h2 class="price-one">₱400</h2>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 class="mini-set">Salmon, octopus, shrimp, eel</h3>
+    <p class="mini-grams">350 gr</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h3 class="Aburi-roll">Aburi Sushi Set</h3>
+        <h2 class="price-one">₱350</h2>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 class="mini-set">Tuna, shrimp, salmon</h3>
+    <p class="mini-grams">220 gr</p>
+
+    <div class="box-container">
+        <div class="box">
+            <div class="content">
+                <h1 class="sushi-menu">SOUPS & RICE</h1>
+            </div>
+            <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <h3 class="Aburi-roll">Hot Dish</h3>
+            <h2 class="price-one">₱200</h2>
+            <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 class="mini-set">Rice & Salmon</h3>
+    <p class="mini-grams">400 gr</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h3 class="Aburi-roll">Soup Ramen</h3>
+        <h2 class="price-one">₱200</h2>
+        <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 class="mini-set">Noodles & Pork</h3>
+<p class="mini-grams">430 gr</p>
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<div class="box-container">
+    <div class="box">
+        <div class="content">
+            <h1 class="sushi-menu">DRINKS</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <h3 class="Aburi-roll">Sodju</h3>
+            <h2 class="price-one">₱350</h2>
+            </div>
+            <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 class="mini-set">250 ml</h3>
+    <p class="mini-grams"></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h3 class="Aburi-roll">Japanese Tea</h3>
+        <h2 class="price-one">₱150</h2>
+        </div>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 class="mini-set">300 ml</h3>
+    <p class="mini-grams"></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </section>
+
+    <!-- About us -->
+
+    <section class="about" id="About">
+
+        <div class="content">
+            <h1 class="heading">About</h1>
+            <div class="box-container">
+                <div class="box">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="about-us">About us</h3>
+                    <br>
+                    <p class="des">
+                        Welcome to Sushi Rolls, where the art of sushi comes to life. Our journey began with a deep passion for crafting extraordinary sushi experiences, and today, we are proud to share that passion with you.
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="about-us">Our Story</h3>
+                    <br>
+                    <p class="des">
+                        At Sushi Rolls, we believe that sushi is more than just a meal; it's an art form. Our story is one of dedication to the craft, a commitment to quality, and a desire to delight your taste buds. Inspired by the rich traditions of Japanese cuisine and a love for innovation, we've carefully curated a menu that blends authentic flavors with a creative twist.
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="about-us">Our Team</h3>
+                    <br>
+                    <p class="des">
+                        Behind every exquisite sushi roll is a team of skilled culinary artists. Led by our head chef, Dale, our kitchen is a haven of expertise and creativity. With years of experience and a shared devotion to perfection, our team strives to elevate your dining experience with each dish we prepare.
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="about-us">Our Philosophy</h3>
+                    <br>
+                    <p class="des">
+                        At the heart of our restaurant is a dedication to quality and sustainability. We source the freshest ingredients, handpick the finest seafood, and use responsible practices to ensure that our sushi not only tastes exceptional but also aligns with our commitment to environmental responsibility.
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="about-us">Menu</h3>
+                    <br>
+                    <p class="des">
+                        Our menu boasts an array of traditional and innovative sushi rolls, sashimi, and Japanese dishes. From our signature rolls to a wide variety of options, you're sure to find something that tantalizes your palate.
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="about-us">Ambiance</h3>
+                    <br>
+                    <p class="des">
+                        Step into Sushi Rolls and enter a world of tranquility and sophistication. Our meticulously designed interior offers a serene atmosphere, creating the perfect setting for you to savor each bite. Whether you're dining with friends, family, or that special someone, our ambiance sets the stage for an unforgettable culinary journey.
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="about-us">Opening Hours</h3>
+                    <br>
+                    <br>
+                    <div class="container">
+                    <h4 class="sched">Sunday - 09:00AM to 09:00PM</h4>
+                    <br>
+                    <h4 class="sched">Monday - 09:00AM to 11:00PM</h4>
+                    <br>
+                    <h4 class="sched">Tuesday - 09:00AM to 11:00PM</h4>
+                    <br>
+                    <h4 class="sched-1">Wednesday - 09:00AM to 11:00PM</h4>
+                    <br>
+                    <h4 class="sched-1">Thursday - 09:00AM to 09:00PM</h4>
+                    <br>
+                    <h4 class="sched-1">Friday - 09:00AM to 09:00PM</h4>
+                    <br>
+                    <h4 class="sched-1">Saturday - 09:00AM to 09:00PM</h4>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="about-us">Join Us</h3>
+                    <br>
+                    <p class="des">
+                        Experience the art of sushi at Sushi Rolls. We invite you to dine with us and discover the flavors, traditions, and innovation that define our culinary identity. Make a reservation or order online to enjoy a taste of Japan right here in JC. Aquino-Montilla Boulevard, Butuan City.
+                        </p>
+                        <br>
+                    <p class="des"> 
+                        We look forward to serving you and making your sushi dreams a reality. Thank you for choosing Sushi Rolls for your sushi experience.
+                    </p>
+    </section>
+
+    <!-- Contact -->
+
+    <section class="contact" id="Contact">
+
+        <div class="content">
+            <h1 class="heading">Contact Us</h1>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <p class="ases"> 
+                We're here to assist you and answer any questions you may have. Please feel free to reach out to us using the following contact information:
+            </p>
+            <br>
+            <br>
+            <br>
+
+            <h3 class="asis">Phone Number: 09123456789</h3>
+            <h3 class="asis">Email: abcdefg@gmail.com</h3>
+            <h3 class="asos">Address:</h3>
+            <p class="asus">
+                Sushi Rolls
+            </p>
+            <p class="asus">
+                JC Aquino-Montilla Boulevard
+            </p>
+            <p class="asus">
+                Butuan City
+            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3 class="asos"> Contact Form:</h3>
+            <p class="asus">You can also send us a message directly using the form below. Simply fill in your details, and we'll get back to you as soon as possible.</p>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+
+                <form action="">
+
+                <div class="inputbox">
+                    <input type="text" placeholder="name">
+                    <input type="email" placeholder="email">
+                    <input type="number" placeholder="number">
+                    <input type="text" placeholder="address">
+
+                <textarea placeholder="Message" name="" id="" cols="30" rows="5"></textarea>
+
+                <input type="submit" value="send" class="btn">
+            </form>
+            </div>
+
+            <!-- End Content -->
+
+</body>
+</html>
+
