@@ -248,7 +248,7 @@ nav ul.nav li a:focus {
 }
 
 .hero h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -652,6 +652,19 @@ body.dark-mode figcaption {
   color: #cccccc !important;
 }
 
+body.dark-mode .site-footer {
+  background: #1b4332 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .site-footer span {
+  color: #ffffff !important;
+}
+
+body.dark-mode .site-footer * {
+  color: #ffffff !important;
+}
+
 body.dark-mode .card {
   background: rgba(74, 158, 255, 0.1);
   border: 1px solid rgba(74, 158, 255, 0.3);
@@ -775,7 +788,7 @@ body.dark-mode .editable:focus {
     height: 90px;
   }
   .hero h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   section, .hero, .about, .skills, .projects, .contact {
     padding: 1.2rem 0;
